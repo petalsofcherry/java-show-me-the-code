@@ -14,13 +14,15 @@ public class Probelm4 {
             Integer count = 0;
             String pre = "不是单词";
             for (int tempchar = reader.read(); tempchar != -1; tempchar = reader.read()) {
-               if (pre=="不是单词" && ((tempchar>=65 && tempchar<=90) || (tempchar>=97 && tempchar <= 122))) {
-                   count++;
-                   pre = "是单词";
-               }
+               if ((char) tempchar != '\n' && (char) tempchar != '\r') {
+                   if (pre=="不是单词" && ((tempchar>=65 && tempchar<=90) || (tempchar>=97 && tempchar <= 122))) {
+                       count++;
+                       pre = "是单词";
+                   }
 
-               if (!((tempchar>=65 && tempchar<=90) || (tempchar>=97 && tempchar <= 122))) {
-                   pre = "不是单词";
+                   if (!((tempchar>=65 && tempchar<=90) || (tempchar>=97 && tempchar <= 122))) {
+                       pre = "不是单词";
+                   }
                }
             }
             System.out.println(count);
