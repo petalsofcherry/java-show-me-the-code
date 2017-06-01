@@ -4,7 +4,7 @@ import java.io.*;
  * Created by luojingyu on 17-5-29.
  */
 
-public class Probelm4 {
+public class Problem4 {
     public static void main(String[] args) throws IOException {
         String path = "/home/luojingyu/test";
         InputStream is = null;
